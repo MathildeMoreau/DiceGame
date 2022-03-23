@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  background: url(./images/amanda-jones-K2PAVcngNvY-unsplash.jpg) 50%;
+  background-size: cover;
+  background-position: center;
+  font-family: "Lato", sans-serif !important;
+}
+
+.player1 {
+  background: #218c75c4;
+}
+
+.player2 {
+  background: #05c46bc7;
+}
+
+input {
+  border: none;
+  height: 3rem;
+}
+
+#dice {
+  width: 7rem;
+}
+
+#new-game {
+  top: 15%;
+}
+
+#roll-dice {
+  top: 70%;
+}
+
+#hold {
+  top: 80%;
+}
