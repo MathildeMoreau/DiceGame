@@ -11,24 +11,37 @@
   <div class="container d-flex flex-row">
     <div class="player1 w-50 vh-100 ">
       <div class="d-flex justify-content-center align-items-center ">
-        <input type="text" placeholder="Player 1" class="rounded-pill w-75 mt-2 text-center">
+        <input type="text" placeholder="Player 1" class="rounded-pill w-75 mt-2 text-center" id="player1input">
       </div>
         <div class="total-score d-flex justify-content-center align-items-center mt-5 w-50 text-center">
           Total score :
-          <div class="score fs-1">32</div>
+          <div class="score fs-1" id="hold-score-1">0</div>
         </div>
         <div class="current-score d-flex justify-content-center align-items-center mt-5 w-50 text-center">
           Current score :
-          <div class="score fs-1">4</div>
+          <div class="score fs-1" id="current-score-1">0</div>
         </div>
     </div>
     <button class="position-absolute start-50 translate-middle border-0 rounded-pill w-25" id="new-game">New Game</button>
+    <div class="winner" id="winner"></div>
     <img src="./images/dice-six-faces-one.svg" class="position-absolute top-50 start-50 translate-middle" id="dice"/>
     <button class="position-absolute start-50 translate-middle border-0 rounded-pill w-25" id="roll-dice">Roll the dice</button>
     <button class="position-absolute start-50 translate-middle border-0 rounded-pill w-25" id="hold">Hold</button>
 
-    <div class="player2 w-50 vh-100 d-flex justify-content-center">
-      <input type="text" placeholder="Player 2" class="rounded-pill w-75 mt-2 text-center">
+    <div class="player2 w-50 vh-100">
+      <div class="d-flex justify-content-center align-items-center">
+        <input type="text" placeholder="Player 2" class="rounded-pill w-75 mt-2 text-center" id="player2input">
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="total-score d-flex justify-content-center align-items-center mt-5 w-50 text-center">
+          Total score :
+          <div class="score fs-1" id="hold-score-2">0</div>
+        </div>
+        <div class="current-score d-flex justify-content-center align-items-center mt-5 w-50 text-center">
+          Current score :
+          <div class="score fs-1" id="current-score-2">0</div>
+        </div>
+      </div>
     </div>
   </div>
   

@@ -35,3 +35,12 @@ input {
 #hold {
   top: 80%;
 }
+
+.winner {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 500px;
+  height: 100px;
+  z-index: 50;
+}
