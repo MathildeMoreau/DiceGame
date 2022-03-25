@@ -76,6 +76,32 @@ button {
   z-index: -4;
 }
 
+@media all and (max-width: 370px) {
+  #new-game {
+    top: 25%;
+  }
+
+  .total-container {
+    margin-top: 2rem;
+  }
+  .total-score,
+  .score {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  #dice {
+    width: 3rem;
+  }
+
+  #roll-dice {
+    top: 65%;
+  }
+
+  #hold {
+    top: 75%;
+  }
+}
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .winner {
     left: 20%;
