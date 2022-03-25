@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 body {
-  background: url(./images/amanda-jones-K2PAVcngNvY-unsplash.jpg) 50%;
-  background-size: cover;
-  background-position: center;
   font-family: "Lato", sans-serif !important;
 }
 
 .player1 {
-  background: #218c75c4;
+  background: rgb(190, 216, 212);
 }
 
 .player2 {
-  background: #05c46bc7;
+  background: #5c80bc;
 }
 
 input {
@@ -20,8 +17,27 @@ input {
   height: 3rem;
 }
 
+button {
+  height: 2.5rem;
+  width: 10rem;
+}
+
+.button:hover {
+  transform: scale(2);
+}
+.total-score,
+.score {
+  font-size: 3rem;
+}
+
+.current-score {
+  margin-top: 8rem;
+}
+
 #dice {
   width: 7rem;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 #new-game {
@@ -29,18 +45,52 @@ input {
 }
 
 #roll-dice {
-  top: 70%;
+  top: 80%;
 }
 
 #hold {
-  top: 80%;
+  top: 90%;
 }
 
 .winner {
   position: absolute;
-  top: 30%;
-  left: 30%;
-  width: 500px;
-  height: 100px;
+  top: 35%;
   z-index: 50;
+}
+
+.winning-img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#myModal {
+  z-index: 70;
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity {
+  opacity: 0.5;
+  z-index: -4;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .winner {
+    left: 20%;
+  }
+  .winning-img {
+    max-width: 800px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .winner {
+    left: 30%;
+  }
+  .winning-img {
+    max-width: 1000px;
+    max-height: 600px;
+  }
 }

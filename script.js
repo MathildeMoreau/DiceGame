@@ -9,15 +9,40 @@ const currentScore2 = document.getElementById("current-score-2");
 const winner = document.getElementById("winner");
 const player1input = document.getElementById("player1input");
 const player2input = document.getElementById("player2input");
+const modal = document.getElementById("myModal");
+const closeModal = document.getElementById("close-btn");
+const closingBtn = document.getElementById("closing-btn");
+const player1part = document.querySelector(".player1");
+const player2part = document.querySelector(".player2");
 let scorePlayer1 = 0;
 let scorePlayer2 = 0;
 let player1 = true;
 let player2 = false;
 
+function addOpacity() {
+  player1part.classList.add("opacity");
+  player2part.classList.add("opacity");
+}
+
+function reset() {
+  scorePlayer1 *= 0;
+  scorePlayer2 *= 0;
+  currentScore1.innerHTML = 0;
+  currentScore2.innerHTML = 0;
+}
+
+// CLOSING THE MODAL EXPLAINING THE RULES
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+closingBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
 // SETTING NEW GAME
 newGame.addEventListener("click", () => {
-  scorePlayer1 == 0;
-  scorePlayer2 == 0;
+  reset();
+  player1 === true;
   holdPlayer1.innerHTML = 0;
   holdPlayer2.innerHTML = 0;
   winner.innerHTML = "";
@@ -42,46 +67,63 @@ document.querySelectorAll("#dice, #roll-dice").forEach((el) => {
           scorePlayer2 *= 0;
         }
         player1 = !player1;
+        if (player1) {
+          player2part.classList.add("opacity");
+          player1part.classList.remove("opacity");
+        } else if (!player1) {
+          player1part.classList.add("opacity");
+          player2part.classList.remove("opacity");
+        }
         slaps();
         break;
       case 2:
         dice.src = "./images/dice-six-faces-two.svg";
         if (player1 === true) {
           scorePlayer1 += 2;
+          player2part.classList.add("opacity");
         } else {
           scorePlayer2 += 2;
+          player1part.classList.add("opacity");
         }
         break;
       case 3:
         dice.src = "./images/dice-six-faces-three.svg";
         if (player1 === true) {
           scorePlayer1 += 3;
+          player2part.classList.add("opacity");
         } else {
           scorePlayer2 += 3;
+          player1part.classList.add("opacity");
         }
         break;
       case 4:
         dice.src = "./images/dice-six-faces-four.svg";
         if (player1 === true) {
           scorePlayer1 += 4;
+          player2part.classList.add("opacity");
         } else {
           scorePlayer2 += 4;
+          player1part.classList.add("opacity");
         }
         break;
       case 5:
         dice.src = "./images/dice-six-faces-five.svg";
         if (player1 === true) {
           scorePlayer1 += 5;
+          player2part.classList.add("opacity");
         } else {
           scorePlayer2 += 5;
+          player1part.classList.add("opacity");
         }
         break;
       case 6:
         dice.src = "./images/dice-six-faces-six.svg";
         if (player1 === true) {
           scorePlayer1 += 6;
+          player2part.classList.add("opacity");
         } else {
           scorePlayer2 += 6;
+          player1part.classList.add("opacity");
         }
         break;
       default:
@@ -100,12 +142,9 @@ hold.addEventListener("click", () => {
     parseInt(holdPlayer2.innerHTML) + parseInt(currentScore2.innerHTML);
   holdPlayer1.innerHTML = total1;
   holdPlayer2.innerHTML = total2;
+  reset();
   currentScore1 == 0;
-  scorePlayer1 *= 0;
-  currentScore1.innerHTML = 0;
   currentScore2 == 0;
-  scorePlayer2 *= 0;
-  currentScore2.innerHTML = 0;
 
   const click = (clic) => {
     const audio = new Audio();
@@ -114,18 +153,29 @@ hold.addEventListener("click", () => {
   };
   click();
   player1 = !player1;
+  if (player1) {
+    player1part.classList.remove("opacity");
+    player2part.classList.add("opacity");
+  } else if (!player1) {
+    player2part.classList.remove("opacity");
+    player1part.classList.add("opacity");
+  }
 
   // END THE GAME AT 100 POINTS
-  if (total1 >= 10) {
+  if (total1 >= 100) {
+    addOpacity();
     winner.innerHTML = `
-    <h1> Congratulations ${player1input.value} ! </h1>
-    <img src='./images/giphy.gif' />;
+    <h1> ${player1input.value} you won ! </h1>
+    <img src='./images/giphy.gif' class="winning-img"/>
     `;
-  } else if (total2 >= 10) {
+    reset();
+  } else if (total2 >= 100) {
+    addOpacity();
     winner.innerHTML = `
-    <h1> Congratulations ${player2input.value} ! </h1>
-    <img src='./images/giphy.gif' />;
+    <h1> ${player2input.value} you won ! </h1>
+    <img src='./images/giphy.gif' class="winning-img"/>
     `;
+    reset();
   }
 });
 
