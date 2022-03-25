@@ -31,25 +31,25 @@ button {
 }
 
 .current-score {
-  margin-top: 8rem;
+  margin-top: 12rem;
 }
 
 #dice {
-  width: 7rem;
+  width: 5rem;
   border-radius: 10px;
   cursor: pointer;
 }
 
 #new-game {
-  top: 15%;
+  top: 20%;
 }
 
 #roll-dice {
-  top: 80%;
+  top: 65%;
 }
 
 #hold {
-  top: 90%;
+  top: 72%;
 }
 
 .winner {
@@ -76,7 +76,27 @@ button {
   z-index: -4;
 }
 
-@media all and (max-width: 370px) {
+@media all and (max-width: 320px) {
+  .total-score,
+  .score {
+    margin: 0;
+    font-size: 2rem;
+  }
+  .current-score {
+    margin-top: 4rem;
+  }
+  #new-game {
+    top: 28%;
+  }
+  #dice {
+    width: 3rem;
+  }
+  #roll-dice {
+    display: none;
+  }
+}
+
+@media all and (min-width: 321px) and (max-width: 375px) {
   #new-game {
     top: 25%;
   }
@@ -99,7 +119,11 @@ button {
   }
 
   #hold {
-    top: 75%;
+    top: 72%;
+  }
+
+  .current-score {
+    margin-top: 9rem;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1024px) {
