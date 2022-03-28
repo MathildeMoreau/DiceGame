@@ -20,7 +20,7 @@ button {
 }
 .total-score,
 .score {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .current-score {
@@ -34,6 +34,7 @@ button {
 
 .winner {
   position: absolute;
+  top: 36%;
   z-index: 50;
 }
 
@@ -60,7 +61,7 @@ button {
     background: linear-gradient(90deg, rgb(190, 216, 212) 50%, #5c80bc 50%);
   }
   .winner {
-    top: 13%;
+    top: 19%;
   }
 }
 
