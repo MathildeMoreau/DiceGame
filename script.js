@@ -45,6 +45,8 @@ newGame.addEventListener("click", () => {
   player1 === true;
   holdPlayer1.innerHTML = 0;
   holdPlayer2.innerHTML = 0;
+  player1part.classList.remove("opacity");
+  player2part.classList.remove("opacity");
   winner.innerHTML = "";
 });
 
@@ -162,14 +164,14 @@ hold.addEventListener("click", () => {
   }
 
   // END THE GAME AT 100 POINTS
-  if (total1 >= 100) {
+  if (total1 >= 10) {
     addOpacity();
     winner.innerHTML = `
     <h1> ${player1input.value} you won ! </h1>
     <img src='./images/giphy.gif' class="winning-img"/>
     `;
     reset();
-  } else if (total2 >= 100) {
+  } else if (total2 >= 10) {
     addOpacity();
     winner.innerHTML = `
     <h1> ${player2input.value} you won ! </h1>

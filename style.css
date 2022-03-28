@@ -2,14 +2,7 @@
 
 body {
   font-family: "Lato", sans-serif !important;
-}
-
-.player1 {
-  background: rgb(190, 216, 212);
-}
-
-.player2 {
-  background: #5c80bc;
+  background: linear-gradient(180deg, rgb(190, 216, 212) 50%, #5c80bc 50%);
 }
 
 input {
@@ -23,44 +16,30 @@ button {
 }
 
 .button:hover {
-  transform: scale(2);
+  transform: scale(1.1);
 }
 .total-score,
 .score {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .current-score {
-  margin-top: 12rem;
+  background: white;
+  border-radius: 30px;
 }
-
 #dice {
-  width: 5rem;
   border-radius: 10px;
   cursor: pointer;
 }
 
-#new-game {
-  top: 20%;
-}
-
-#roll-dice {
-  top: 65%;
-}
-
-#hold {
-  top: 72%;
-}
-
 .winner {
   position: absolute;
-  top: 35%;
   z-index: 50;
 }
 
 .winning-img {
-  max-width: 400px;
-  max-height: 400px;
+  width: 100%;
+  max-width: 500px;
 }
 
 #myModal {
@@ -76,71 +55,17 @@ button {
   z-index: -4;
 }
 
-@media all and (max-width: 320px) {
-  .total-score,
-  .score {
-    margin: 0;
-    font-size: 2rem;
+@media all and (min-width: 768px) {
+  body {
+    background: linear-gradient(90deg, rgb(190, 216, 212) 50%, #5c80bc 50%);
   }
-  .current-score {
-    margin-top: 4rem;
-  }
-  #new-game {
-    top: 28%;
-  }
-  #dice {
-    width: 3rem;
-  }
-  #roll-dice {
-    display: none;
-  }
-}
-
-@media all and (min-width: 321px) and (max-width: 375px) {
-  #new-game {
-    top: 25%;
-  }
-
-  .total-container {
-    margin-top: 2rem;
-  }
-  .total-score,
-  .score {
-    margin-top: 1rem;
-    font-size: 2rem;
-  }
-
-  #dice {
-    width: 3rem;
-  }
-
-  #roll-dice {
-    top: 65%;
-  }
-
-  #hold {
-    top: 72%;
-  }
-
-  .current-score {
-    margin-top: 9rem;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1024px) {
   .winner {
-    left: 20%;
-  }
-  .winning-img {
-    max-width: 800px;
+    top: 13%;
   }
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1280px) {
   .winner {
-    left: 30%;
-  }
-  .winning-img {
-    max-width: 1000px;
-    max-height: 600px;
+    top: 30%;
   }
 }

@@ -1,0 +1,482 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&family=Rajdhani&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif !important;
+  overflow-x: hidden;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 50px;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+.purpleBubble {
+  display: none;
+}
+
+.accueil {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #9fa9ff;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #9fa9ff;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.backgroundImage > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+button {
+  background: #9fa9ff;
+  border-radius: 40px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* ASSOCIATION */
+.association {
+  margin-top: 10rem;
+}
+
+.left-side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titres-asso {
+  text-align: center;
+}
+
+.titres-asso > p {
+  text-align: justify;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.formulaire > h3 {
+  font-size: 3rem;
+  color: #9fa9ff;
+}
+
+form > input,
+.names > input,
+.area > textarea {
+  border-radius: 3px;
+  border: rgba(128, 128, 128, 0.425) 2px solid;
+  margin: 10px;
+  padding: 3px;
+}
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#send {
+  width: 70%;
+  height: 70%;
+  border: transparent;
+  color: white;
+}
+
+.backBubble {
+  display: none;
+}
+
+.members {
+  margin-top: 3rem;
+}
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.members > h3 {
+  color: #9fa9ff;
+  text-align: center;
+  font-size: 3rem;
+}
+.recouvrement-container {
+  position: relative;
+}
+
+.recouvrement-container > img {
+  width: 100%;
+  height: 100%;
+}
+
+.recouvrement {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: #9fa9ff;
+}
+
+.recouvrement-container:hover .recouvrement {
+  opacity: 0.8;
+}
+
+.recouvrement-texte {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+}
+
+/* EVENEMENTS */
+
+.event {
+  color: #9fa9ff;
+  margin-top: 5rem;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.carousel-item > img {
+  max-height: 550px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+}
+
+.events-ete,
+.guinguette,
+.fete-lumiere {
+  margin-top: 1rem;
+}
+.photos-ete,
+.photos-guinguette {
+  display: flex;
+  flex-direction: column;
+}
+
+.photos-ete > img,
+.photos-guinguette > img {
+  width: 100%;
+}
+
+/* CONTACT */
+
+.contact {
+  margin-top: 4rem;
+}
+
+.coordonnes {
+  display: flex;
+  flex-direction: column;
+}
+.telephone,
+.mail {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.telephone > img,
+.mail > img {
+  width: 70px;
+}
+
+.telephone > p,
+.mail > p {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.reseaux-img {
+  width: 6.5rem;
+  margin-right: 20px;
+}
+iframe {
+  width: 100%;
+}
+
+#facebook-logo {
+  border-radius: 50%;
+  width: 5rem;
+}
+
+/* FOOTER */
+
+footer {
+  background: #9fa9ff;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > p {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+footer > p > a {
+  text-decoration: underline;
+  color: white;
+}
+
+footer > p > a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .backgroundImage > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .association {
+    margin-top: 3rem;
+  }
+
+  .titres-asso > p {
+    text-align: center;
+  }
+
+  #send {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .nav-link {
+    font-size: 1.5rem;
+  }
+  .purpleBubble {
+    display: block;
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    left: 68%;
+    bottom: 80%;
+    background: #9fa9ff;
+    border-radius: 50%;
+    z-index: -4;
+  }
+  .backgroundImage > img {
+    width: 80%;
+    height: 80%;
+  }
+
+  span {
+    font-size: 30px;
+  }
+
+  .association {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    width: 550px;
+  }
+
+  .formulaire {
+    margin-top: 2rem;
+  }
+
+  .members {
+    margin-top: 2rem;
+  }
+  .right-side {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .photos-ete,
+  .photos-guinguette {
+    display: flex;
+    flex-direction: row;
+  }
+  .photos-ete > img {
+    width: 33%;
+  }
+
+  .photos-guinguette > img {
+    width: 45%;
+  }
+
+  iframe {
+    width: 80%;
+  }
+  .telephone-mail {
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .d-none {
+    font-size: 2.5rem;
+  }
+  .purpleBubble {
+    display: block;
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    left: 75%;
+    bottom: 80%;
+    background: #9fa9ff;
+    border-radius: 50%;
+    z-index: -4;
+  }
+
+  .navbar-nav {
+    margin-left: 8rem;
+  }
+  .nav-link {
+    font-size: 3rem;
+    margin-right: 20px;
+  }
+
+  .accueil {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .backgroundImage > img {
+    width: 70%;
+    height: 80%;
+  }
+
+  h1 {
+    font-size: 5rem;
+    color: #9fa9ff;
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 40%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: white;
+  }
+
+  .left-side {
+    flex-direction: column;
+  }
+
+  .titres-asso > p {
+    text-align: center;
+  }
+
+  .association {
+    display: flex;
+    margin-top: 5rem;
+  }
+
+  input,
+  textarea {
+    width: 30rem;
+  }
+
+  form {
+    margin-top: 1rem;
+  }
+
+  #send {
+    width: 60%;
+    height: 3rem;
+  }
+
+  .members {
+    margin: 0;
+  }
+  .right-side {
+    flex-direction: column;
+    margin-left: 15rem;
+  }
+
+  .recouvrement-container > img {
+    width: 65%;
+  }
+
+  .recouvrement {
+    width: 65%;
+  }
+
+  .fete-lumiere {
+    margin-top: 20px;
+  }
+
+  .photos-ete,
+  .photos-guinguette {
+    display: flex;
+    flex-direction: row;
+  }
+  .photos-ete > img {
+    width: 33%;
+  }
+
+  .photos-guinguette > img {
+    width: 45%;
+  }
+
+  .coordonnes {
+    display: flex;
+    flex-direction: row;
+  }
+  iframe {
+    width: 80%;
+  }
+
+  .reseaux {
+    width: 30rem;
+  }
+
+  .reseaux > a {
+    margin-right: 30px;
+  }
+}

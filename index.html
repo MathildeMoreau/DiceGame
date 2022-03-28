@@ -33,38 +33,50 @@
       </div>
     </div>
   </div>
-  <div class="container d-flex flex-row">
-    <div class="player1 w-50 vh-100 ">
-      <div class="d-flex justify-content-center align-items-center ">
-        <input type="text" placeholder="Player 1 : Name" class="rounded-pill w-75 mt-5 text-center" id="player1input">
+  <div class="container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center">
+    <div class="player1 py-5">
+      <div class="d-flex justify-content-center align-items-center row">
+        <input type="text" placeholder="Player 1 : Name" class="rounded-pill w-75 text-center" id="player1input">
       </div>
       <div class="d-flex flex-column justify-content-center align-items-center total-container">
-        <div class="total-score d-flex flex-column justify-content-center align-items-center mt-5 w-50 text-center">
-          Total score
+        <div class="total-score d-flex flex-column justify-content-center align-items-center mt-5 text-center">
+          Total
           <div class="score" id="hold-score-1">0</div>
         </div>
-        <div class="current-score d-flex flex-column justify-content-center align-items-center w-50 text-center">
+        <div class="current-score d-flex flex-column justify-content-center align-items-center text-center mt-5 px-5">
           Current score
           <div class="score fs-1" id="current-score-1">0</div>
         </div>
       </div>
     </div>
-    <button class="position-absolute start-50 translate-middle border-0 rounded-pill button" id="new-game">New Game</button>
-    <div class="winner" id="winner"></div>
-    <img src="./images/dice-six-faces-one.svg" class="position-absolute top-50 start-50 translate-middle" id="dice"/>
-    <button class="position-absolute start-50 translate-middle border-0 rounded-pill button" id="roll-dice">Roll the dice</button>
-    <button class="position-absolute start-50 translate-middle border-0 rounded-pill button" id="hold">Hold</button>
+      <div class="diceButtons row flex-md-column justify-content-center align-items-center mt-5">
+        <button class="col-12 col-md-6 border-0 bg-transparent rounded-pill button my-4 d-flex align-items-center justify-content-center">
+          <div class="bg-white col-5 py-2 col-md-12 rounded-pill" id="new-game">
+            New Game
+          </div>
+        </button>
+        <div class="winner d-flex flex-column justify-content-center align-items-center" id="winner"></div>
+        <div class="d-flex justify-content-center align-items-center col-12 col-md6">
+          <div class="d-flex justify-content-center align-items-center col-12">
+            <img src="./images/dice-six-faces-one.svg" class="w-25" id="dice" />
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex m-0 p-0 flex-md-column justify-content-evenly my-4">
+          <button class="p-0 my-2 border-0 rounded-pill button bg-white" id="roll-dice">Roll the dice</button>
+          <button class="p-0 my-2 border-0 rounded-pill button bg-white" id="hold">Hold</button>
+        </div>
+      </div>
 
-    <div class="player2 w-50 vh-100">
-      <div class="d-flex justify-content-center align-items-center">
-        <input type="text" placeholder="Player 2 : Name" class="rounded-pill w-75 mt-5 text-center" id="player2input">
+    <div class="player2 py-5">
+      <div class="d-flex justify-content-center align-items-center row">
+        <input type="text" placeholder="Player 2 : Name" class="rounded-pill w-75 text-center" id="player2input">
       </div>
       <div class="d-flex flex-column justify-content-center align-items-center total-container">
-        <div class="total-score d-flex flex-column justify-content-center align-items-center mt-5 w-50 text-center">
-          Total score
+        <div class="total-score d-flex flex-column justify-content-center align-items-center mt-5 text-center">
+          Total
           <div class="score" id="hold-score-2">0</div>
         </div>
-        <div class="current-score d-flex flex-column justify-content-center align-items-center w-50 text-center">
+        <div class="current-score d-flex flex-column justify-content-center align-items-center text-center mt-5 px-5">
           Current score
           <div class="score fs-1" id="current-score-2">0</div>
         </div>
